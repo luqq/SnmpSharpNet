@@ -66,7 +66,7 @@ namespace SnmpSharpNet
 		
 		/// <summary>Returns a duplicate of the current object.</summary>
 		/// <returns>Copy of the current object cast as Object</returns>
-		public override Object Clone()
+		public override object Clone()
 		{
 			return new Opaque(this);
 		}

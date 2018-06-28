@@ -75,7 +75,7 @@ namespace SnmpSharpNet
 		{
 			get
 			{
-				return String.Format("{0}> ErrorStatus {1} ErrorIndex {2}", base.Message, _errorStatus, _errorIndex);
+				return string.Format("{0}> ErrorStatus {1} ErrorIndex {2}", base.Message, _errorStatus, _errorIndex);
 			}
 		}
 	}

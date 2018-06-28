@@ -48,7 +48,7 @@ namespace SnmpSharpNet
 		
 		/// <summary>Constructor</summary>
 		/// <param name="val">Unsigned integer encoded in a string.</param>
-		public Counter32(System.String val):base(val)
+		public Counter32(string val):base(val)
 		{
 			_asnType = SnmpConstants.SMI_COUNTER32;
 		}
@@ -62,7 +62,7 @@ namespace SnmpSharpNet
 		
 		/// <summary>Duplicate current object</summary>
 		/// <returns>Duplicate of the current object cast as Object class.</returns>
-		public override System.Object Clone()
+		public override object Clone()
 		{
 			return new Counter32(this);
 		}

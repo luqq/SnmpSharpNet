@@ -17,45 +17,38 @@ using System;
 
 namespace SnmpSharpNet
 {
-	/// <summary>
-	/// Privacy encryption or decryption exception
-	/// </summary>
-	/// <remarks>
-	/// Exception thrown when errors were encountered related to the privacy protocol encryption and decryption operations.
-	/// 
-	/// Use ParentException field to get the causing error details.
-	/// </remarks>
-	public class SnmpPrivacyException : SnmpException
-	{
-		/// <summary>
-		/// Exception that caused this exception to be thrown
-		/// </summary>
-		private Exception _parentException;
-		/// <summary>
-		/// Exception that caused this exception to be thrown
-		/// </summary>
-		public Exception ParentException
-		{
-			get { return _parentException; }
-		}
-		/// <summary>
-		/// Standard constructor initializes the exceptione error message
-		/// </summary>
-		/// <param name="msg">Error message</param>
-		public SnmpPrivacyException(string msg)
-			: base(msg)
-		{
-		}
+    /// <summary>
+    /// Privacy encryption or decryption exception
+    /// </summary>
+    /// <remarks>
+    /// Exception thrown when errors were encountered related to the privacy protocol encryption and decryption operations.
+    /// 
+    /// Use ParentException field to get the causing error details.
+    /// </remarks>
+    public class SnmpPrivacyException : SnmpException
+    {
+        /// <summary>
+        /// Exception that caused this exception to be thrown
+        /// </summary>
+        public Exception ParentException { get; }
+        /// <summary>
+        /// Standard constructor initializes the exceptione error message
+        /// </summary>
+        /// <param name="msg">Error message</param>
+        public SnmpPrivacyException(string msg)
+            : base(msg)
+        {
+        }
 
-		/// <summary>
-		/// Constructor initializes error message and parent exception
-		/// </summary>
-		/// <param name="ex">Parent exception</param>
-		/// <param name="msg">Error message</param>
-		public SnmpPrivacyException(Exception ex, string msg)
-			: base(msg)
-		{
-			_parentException = ex;
-		}
-	}
+        /// <summary>
+        /// Constructor initializes error message and parent exception
+        /// </summary>
+        /// <param name="ex">Parent exception</param>
+        /// <param name="msg">Error message</param>
+        public SnmpPrivacyException(Exception ex, string msg)
+            : base(msg)
+        {
+            ParentException = ex;
+        }
+    }
 }

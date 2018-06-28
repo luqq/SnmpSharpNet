@@ -16,69 +16,69 @@
 using System;
 namespace SnmpSharpNet
 {
-	/// <summary>
-	/// Returned when end of MIB has been reached when performing GET-NEXT or GET-BULK operations.
-	/// </summary>
-	[Serializable]
-	public class EndOfMibView : V2Error, System.ICloneable
-	{
-		/// <summary> The default class construtor.</summary>
-		public EndOfMibView():base()
-		{
-			_asnType = SnmpConstants.SMI_ENDOFMIBVIEW;
-		}
-		
-		/// <summary> The class copy constructor.
-		/// </summary>
-		/// <param name="second">The object to copy into self.
-		/// </param>
-		public EndOfMibView(EndOfMibView second):base(second)
-		{
-			_asnType = SnmpConstants.SMI_ENDOFMIBVIEW;
-		}
-		
-		/// <summary> Returns a duplicate object of self. 
-		/// </summary>
-		/// <returns> A duplicate of self
-		/// </returns>
-		public override Object Clone()
-		{
-			return new EndOfMibView(this);
-		}
-		/// <summary>Decode ASN.1 encoded end-of-mib-view SNMP version 2 MIB value</summary>
-		/// <param name="buffer">The encoded buffer</param>
-		/// <param name="offset">The offset of the first byte of encoded data</param>
-		/// <returns>Offset after the decoded value</returns>
-		public override int decode(byte[] buffer, int offset)
-		{
-			int headerLength;
-			byte asnType = ParseHeader(buffer, ref offset, out headerLength);
-			if (asnType != Type)
-			{
-				throw new SnmpException("Invalid ASN.1 type");
-			}
+    /// <summary>
+    /// Returned when end of MIB has been reached when performing GET-NEXT or GET-BULK operations.
+    /// </summary>
+    [Serializable]
+    public class EndOfMibView : V2Error, System.ICloneable
+    {
+        /// <summary> The default class construtor.</summary>
+        public EndOfMibView() : base()
+        {
+            _asnType = SnmpConstants.SMI_ENDOFMIBVIEW;
+        }
 
-			if (headerLength != 0)
-				throw new SnmpException("Invalid ASN.1 length");
+        /// <summary> The class copy constructor.
+        /// </summary>
+        /// <param name="second">The object to copy into self.
+        /// </param>
+        public EndOfMibView(EndOfMibView second) : base(second)
+        {
+            _asnType = SnmpConstants.SMI_ENDOFMIBVIEW;
+        }
 
-			return offset;
-		}
+        /// <summary> Returns a duplicate object of self. 
+        /// </summary>
+        /// <returns> A duplicate of self
+        /// </returns>
+        public override object Clone()
+        {
+            return new EndOfMibView(this);
+        }
+        /// <summary>Decode ASN.1 encoded end-of-mib-view SNMP version 2 MIB value</summary>
+        /// <param name="buffer">The encoded buffer</param>
+        /// <param name="offset">The offset of the first byte of encoded data</param>
+        /// <returns>Offset after the decoded value</returns>
+        public override int Decode(byte[] buffer, int offset)
+        {
+            if (ParseHeader(buffer, ref offset, out int headerLength) != Type)
+            {
+                throw new SnmpException("Invalid ASN.1 type");
+            }
 
-		/// <summary>
-		/// ASN.1 encode end-of-mib-view SNMP version 2 MIB value
-		/// </summary>
-		/// <param name="buffer">MutableByte to append encoded variable to</param>
-		public override void encode(MutableByte buffer)
-		{
-			BuildHeader(buffer, Type, 0);
-		}
-		
-		/// <summary> Returns the string representation of the object.
-		/// </summary>
-		/// <returns>String prepresentation of the object.</returns>
-		public override String ToString()
-		{
-			return "SNMP End-of-MIB-View";
-		}
-	}
+            if (headerLength != 0)
+            {
+                throw new SnmpException("Invalid ASN.1 length");
+            }
+
+            return offset;
+        }
+
+        /// <summary>
+        /// ASN.1 encode end-of-mib-view SNMP version 2 MIB value
+        /// </summary>
+        /// <param name="buffer">MutableByte to append encoded variable to</param>
+        public override void Encode(MutableByte buffer)
+        {
+            BuildHeader(buffer, Type, 0);
+        }
+
+        /// <summary> Returns the string representation of the object.
+        /// </summary>
+        /// <returns>String prepresentation of the object.</returns>
+        public override string ToString()
+        {
+            return "SNMP End-of-MIB-View";
+        }
+    }
 }

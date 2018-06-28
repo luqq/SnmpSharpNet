@@ -16,74 +16,73 @@
 using System;
 namespace SnmpSharpNet
 {
-	
-	/// <summary>ASN.1 Null value implementation.</summary>
-	[Serializable]
-	public class Null : AsnType, ICloneable
-	{
-		/// <summary>Constructor</summary>
-		public Null()
-		{
-			_asnType = SnmpConstants.SMI_NULL;
-		}
-		
-		/// <summary>Constructor</summary>
-		/// <param name="second">Irrelevant. Nothing to copy</param>
-		public Null(Null second) : this()
-		{
-		}
-		
-		#region Encode & decode methods
 
-		/// <summary> 
-		/// ASN.1 encode Null value
-		/// </summary>
-		/// <param name="buffer"><see cref="MutableByte"/> class to the end of which encoded data is appended
-		/// </param>
-		public override void encode(MutableByte buffer)
-		{
-			BuildHeader(buffer, Type, 0);
-		}
-		
-		/// <summary>
-		/// Decode null value from BER encoded buffer.
-		/// </summary>
-		/// <param name="buffer">BER encoded buffer</param>
-		/// <param name="offset">Offset within the buffer from where to start decoding. On return,
-		/// this argument contains the offset immediately following the decoded value.
-		/// </param>
-		/// <returns>Buffer position after the decoded value</returns>
-		/// <exception cref="SnmpException">Thrown when parsed ASN.1 type is not null</exception>
-		/// <exception cref="SnmpException">Thrown when length of null value is greater then 0 bytes</exception>
-		public override int decode(byte[] buffer, int offset)
-		{
-			int headerLength;
-			byte asnType = ParseHeader(buffer, ref offset, out headerLength);
+    /// <summary>ASN.1 Null value implementation.</summary>
+    [Serializable]
+    public class Null : AsnType, ICloneable
+    {
+        /// <summary>Constructor</summary>
+        public Null()
+        {
+            _asnType = SnmpConstants.SMI_NULL;
+        }
 
-			if (asnType != Type)
-				throw new SnmpException("Invalid ASN.1 Type");
+        /// <summary>Constructor</summary>
+        /// <param name="second">Irrelevant. Nothing to copy</param>
+        public Null(Null second) : this()
+        {
+        }
 
-			// Verify length is 0
-			if (headerLength != 0)
-				throw new SnmpException("Malformed ASN.1 Type");
+        /// <summary> 
+        /// ASN.1 encode Null value
+        /// </summary>
+        /// <param name="buffer"><see cref="MutableByte"/> class to the end of which encoded data is appended
+        /// </param>
+        public override void Encode(MutableByte buffer)
+        {
+            BuildHeader(buffer, Type, 0);
+        }
 
-			return offset;
-		}
-		
-		#endregion Encode & decode methods
-		
-		/// <summary>Clone current object</summary>
-		/// <returns>Duplicate of the current object.</returns>
-		public override Object Clone()
-		{
-			return new Null(this);
-		}
-		
-		/// <summary> Returns a string representation of the SNMP NULL object</summary>
-		/// <returns>String representation of the class</returns>
-		public override System.String ToString()
-		{
-			return "Null";
-		}
-	}
+        /// <summary>
+        /// Decode null value from BER encoded buffer.
+        /// </summary>
+        /// <param name="buffer">BER encoded buffer</param>
+        /// <param name="offset">Offset within the buffer from where to start decoding. On return,
+        /// this argument contains the offset immediately following the decoded value.
+        /// </param>
+        /// <returns>Buffer position after the decoded value</returns>
+        /// <exception cref="SnmpException">Thrown when parsed ASN.1 type is not null</exception>
+        /// <exception cref="SnmpException">Thrown when length of null value is greater then 0 bytes</exception>
+        public override int Decode(byte[] buffer, int offset)
+        {
+            byte asnType = ParseHeader(buffer, ref offset, out int headerLength);
+
+            if (asnType != Type)
+            {
+                throw new SnmpException("Invalid ASN.1 Type");
+            }
+
+            // Verify length is 0
+            if (headerLength != 0)
+            {
+                throw new SnmpException("Malformed ASN.1 Type");
+            }
+
+            return offset;
+        }
+
+        /// <summary>Clone current object</summary>
+        /// <returns>Duplicate of the current object.</returns>
+        public override object Clone()
+        {
+            return new Null(this);
+        }
+
+        /// <summary> Returns a string representation of the SNMP NULL object</summary>
+        /// <returns>String representation of the class</returns>
+        public override string ToString()
+        {
+            return "Null";
+        }
+    }
 }

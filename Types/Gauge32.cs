@@ -56,7 +56,7 @@ namespace SnmpSharpNet
 		/// </summary>
 		/// <param name="val">32-bit unsigned integer encoded as a string
 		/// </param>
-		public Gauge32(System.String val):base(val)
+		public Gauge32(string val):base(val)
 		{
 			_asnType = SnmpConstants.SMI_GAUGE32;
 		}
@@ -73,7 +73,7 @@ namespace SnmpSharpNet
 		/// <summary>Duplicate current object.
 		/// </summary>
 		/// <returns>Copy of the object.</returns>
-		public override System.Object Clone()
+		public override object Clone()
 		{
 			return new Gauge32(this);
 		}

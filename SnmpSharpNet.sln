@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnmpSharpNet", "SnmpSharpNet.csproj", "{38F82C2C-A828-4D36-8022-25460D483F7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnmpSharpNet", "SnmpSharpNet\SnmpSharpNet.csproj", "{38F82C2C-A828-4D36-8022-25460D483F7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7B75A653-9C75-497B-8129-05FC4003BC48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{325C5EAB-4BD5-4F23-B13C-EC76988CCDA8}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGES.txt = CHANGES.txt
+		COPYING = COPYING
+		gpl-3_0.txt = gpl-3_0.txt
+		lgpl.txt = lgpl.txt
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38F82C2C-A828-4D36-8022-25460D483F7B} = {7B75A653-9C75-497B-8129-05FC4003BC48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {93261744-F9E1-498C-9893-2C8ECAEA3BB8}

@@ -1,0 +1,38 @@
+﻿
+// This file is used by Code Analysis to maintain SuppressMessage 
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given 
+// a specific target and scoped to a namespace, type, member, etc.
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "member", Target = "~M:SnmpSharpNet.Pdu.Reset")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "member", Target = "~M:SnmpSharpNet.Privacy3DES.NextSalt")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "member", Target = "~M:PrivacyAES.PrivacyAES")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Privacy3DES")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.PrivacyAES")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.PrivacyAES")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.PrivacyDES")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.PrivacyDES")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.UserSecurityModel")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.UserSecurityModel")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.SnmpConstants")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.SnmpConstants")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.UInteger32")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.UInteger32")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.SnmpV1Packet")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.SnmpV3Packet")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.SnmpV3Packet")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.TrapAgent")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.TrapPdu")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Counter32")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Counter32")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Counter64")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Counter64")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Gauge32")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Integer32")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Integer32")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.IpAddress")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.IpAddress")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Oid")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.Oid")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0012:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.TimeTicks")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0013:Simplify Names", Justification = "<Pending>", Scope = "type", Target = "~T:SnmpSharpNet.TimeTicks")]

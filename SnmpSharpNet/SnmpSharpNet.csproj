@@ -5,7 +5,7 @@
     <Version>0.10.0</Version>
     <IncludeSymbols>True</IncludeSymbols>
     <IncludeSource>True</IncludeSource>
-    <PackageId>Snmp#Net</PackageId>
+    <PackageId>SnmpSharpNet</PackageId>
     <Authors>Jose Cardos</Authors>
     <Product>Snmp#Net</Product>
     <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl.txt</PackageLicenseUrl>

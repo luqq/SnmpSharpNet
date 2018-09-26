@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.10.0</Version>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <PackageId>SnmpSharpNet</PackageId>
+    <Authors>Jose Cardos</Authors>
+    <Product>Snmp#Net</Product>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/luqq/snmp-net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/luqq/snmp-net</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageReleaseNotes>Available for .Net Standard</PackageReleaseNotes>
+    <PackageTags>snmpsharpnet snmp#net snmp netstandard</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\SnmpSharpNet.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\SnmpSharpNet.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

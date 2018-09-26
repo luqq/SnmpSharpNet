@@ -1,4 +1,7 @@
-﻿0.9.4
+﻿0.10.0
+* Added support for .Net Standard
+
+0.9.4
 * added support for 2 phase discovery in async requests (UdpTarget class)
 * removed redundant code from Oid.encode method (thanks a.jackson)
 * changed SnmpExceptions codes so RequestTimeout and InvalidIAgentParameters no longer have the same value (thanks m.mckenna)
